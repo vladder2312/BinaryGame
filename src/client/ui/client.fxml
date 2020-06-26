@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="840.0" style="-fx-background-image: url('file:D:/BinaryGame/src/client/image/background.png');" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ui.ClientController">
+   <Label fx:id="number" layoutX="304.0" layoutY="267.0" prefHeight="50.0" prefWidth="85.0" text="128" AnchorPane.bottomAnchor="88.0">
+      <font>
+         <Font name="Consolas" size="48.0" />
+      </font>
+   </Label>
+   <ToggleButton fx:id="seven" layoutX="404.0" layoutY="270.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="0" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="405.0" />
+   <ToggleButton fx:id="six" layoutX="457.0" layoutY="262.0" maxWidth="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="0" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="458.0" />
+   <ToggleButton fx:id="five" layoutX="509.0" layoutY="262.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="0" AnchorPane.leftAnchor="511.0" />
+   <ToggleButton fx:id="four" layoutX="563.0" layoutY="262.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="0" AnchorPane.leftAnchor="564.0" />
+   <ToggleButton fx:id="three" layoutX="617.0" layoutY="262.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="0" AnchorPane.leftAnchor="617.0" />
+   <ToggleButton fx:id="two" layoutX="669.0" layoutY="262.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="0" AnchorPane.leftAnchor="670.0" />
+   <ToggleButton fx:id="one" layoutX="723.0" layoutY="262.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="0" AnchorPane.leftAnchor="723.0" />
+   <ToggleButton fx:id="zero" layoutX="782.0" layoutY="262.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="0" AnchorPane.leftAnchor="776.0" />
+   <TextArea fx:id="playerList" prefHeight="337.0" prefWidth="265.0" />
+</AnchorPane>
