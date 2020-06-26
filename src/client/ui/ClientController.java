@@ -31,7 +31,7 @@ public class ClientController {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                getPlayerList();
+                playerList.setText(client.getPlayerList());
             }
         },0, 1000);
         generateNumber();
@@ -43,6 +43,7 @@ public class ClientController {
         two.setOnAction(actionEvent ->  { model.switchSelected(5); checkNumber(5); });
         one.setOnAction(actionEvent ->  { model.switchSelected(6); checkNumber(6); });
         zero.setOnAction(actionEvent -> { model.switchSelected(7); checkNumber(7); });
+        client.start();
     }
 
     /**
@@ -80,16 +81,6 @@ public class ClientController {
             client.upScore();
             generateNumber();
             disableToggles();
-        }
-    }
-
-    /**
-     * Получить данные о игроках с сервера
-     */
-    private void getPlayerList(){
-        playerList.setText("");
-        for(String line : client.getStringList()){
-            playerList.setText(playerList.getText()+"\n"+line);
         }
     }
 
