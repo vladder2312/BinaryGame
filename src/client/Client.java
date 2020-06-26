@@ -2,22 +2,26 @@ package client;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.List;
 
 public class Client extends Thread {
 
+    private final String nickname = "Andrew";
     private long clientID;
     private Socket socket;
-    private BufferedWriter writer;
-    private BufferedReader reader;
-    private List<String> stringList;
+    private DataOutputStream writer;
+    private DataInputStream reader;
+    private String playerList;
 
     public Client(){
+        playerList="";
         try {
             socket = new Socket("localhost", 4004);
-            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-            clientID = Integer.parseInt(reader.readLine());
+            reader = new DataInputStream(socket.getInputStream());
+            writer = new DataOutputStream(socket.getOutputStream());
+            System.out.println("reading id...");
+            clientID = Integer.parseInt(reader.readUTF());
+            System.out.println("client id: "+clientID);
+            writer.writeUTF(nickname);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -27,8 +31,7 @@ public class Client extends Thread {
     public void run() {
         try{
             while (!socket.isClosed()){
-                String line = reader.readLine();
-                stringList.add(line);
+                playerList = reader.readUTF();
             }
             reader.close();
             writer.close();
@@ -39,14 +42,14 @@ public class Client extends Thread {
 
     public void upScore(){
         try {
-            writer.write("+");
+            writer.writeUTF("+");
         } catch (IOException | NullPointerException e) {
             e.printStackTrace();
         }
     }
 
-    public List<String> getStringList() {
-        return stringList;
+    public String getPlayerList() {
+        return playerList;
     }
 
     public long getClientID() {

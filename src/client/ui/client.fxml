@@ -18,5 +18,8 @@
    <ToggleButton fx:id="two" layoutX="669.0" layoutY="262.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="0" AnchorPane.leftAnchor="670.0" />
    <ToggleButton fx:id="one" layoutX="723.0" layoutY="262.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="0" AnchorPane.leftAnchor="723.0" />
    <ToggleButton fx:id="zero" layoutX="782.0" layoutY="262.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="0" AnchorPane.leftAnchor="776.0" />
-   <TextArea fx:id="playerList" prefHeight="337.0" prefWidth="265.0" />
+   <TextArea fx:id="playerList" prefHeight="337.0" prefWidth="265.0">
+      <font>
+         <Font size="18.0" />
+      </font></TextArea>
 </AnchorPane>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.ui.ServerController">
+    <Label fx:id="stateLabel" layoutX="121.0" layoutY="14.0" text="Выключен" AnchorPane.leftAnchor="121.0"
+           AnchorPane.rightAnchor="121.0" AnchorPane.topAnchor="12.0"/>
+    <TextArea fx:id="textArea" layoutX="14.0" layoutY="31.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0"
+              AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="30.0"/>
+</AnchorPane>
