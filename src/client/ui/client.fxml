@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="840.0" style="-fx-background-image: url('file:D:/BinaryGame/src/client/image/background.png');" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ui.ClientController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ui.ClientController">
    <Label fx:id="number" layoutX="304.0" layoutY="267.0" prefHeight="50.0" prefWidth="85.0" text="128" AnchorPane.bottomAnchor="88.0">
       <font>
          <Font name="Consolas" size="48.0" />

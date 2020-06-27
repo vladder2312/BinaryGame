@@ -5,12 +5,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class ClientController {
 
+    @FXML private AnchorPane anchorPane;
     @FXML private TextArea playerList;
     @FXML private Label number;
     @FXML private ToggleButton seven;
@@ -28,6 +31,12 @@ public class ClientController {
 
     @FXML
     void initialize(){
+        anchorPane.setBackground(new Background(new BackgroundImage(
+                new Image("client/image/background.png"),
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER,
+                BackgroundSize.DEFAULT)));
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
