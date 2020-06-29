@@ -44,14 +44,14 @@ public class ClientController {
             }
         },0, 1000);
         generateNumber();
-        seven.setOnAction(actionEvent ->{ model.switchSelected(0); checkNumber(0); });
-        six.setOnAction(actionEvent ->  { model.switchSelected(1); checkNumber(1); });
-        five.setOnAction(actionEvent -> { model.switchSelected(2); checkNumber(2); });
-        four.setOnAction(actionEvent -> { model.switchSelected(3); checkNumber(3); });
-        three.setOnAction(actionEvent ->{ model.switchSelected(4); checkNumber(4); });
-        two.setOnAction(actionEvent ->  { model.switchSelected(5); checkNumber(5); });
-        one.setOnAction(actionEvent ->  { model.switchSelected(6); checkNumber(6); });
-        zero.setOnAction(actionEvent -> { model.switchSelected(7); checkNumber(7); });
+        seven.setOnAction(actionEvent ->{ model.switchSelected(0); checkNumber(seven); });
+        six.setOnAction(actionEvent ->  { model.switchSelected(1); checkNumber(six); });
+        five.setOnAction(actionEvent -> { model.switchSelected(2); checkNumber(five); });
+        four.setOnAction(actionEvent -> { model.switchSelected(3); checkNumber(four); });
+        three.setOnAction(actionEvent ->{ model.switchSelected(4); checkNumber(three); });
+        two.setOnAction(actionEvent ->  { model.switchSelected(5); checkNumber(two); });
+        one.setOnAction(actionEvent ->  { model.switchSelected(6); checkNumber(one); });
+        zero.setOnAction(actionEvent -> { model.switchSelected(7); checkNumber(zero); });
         client.start();
     }
 
@@ -67,23 +67,11 @@ public class ClientController {
     /**
      * Изменить текст 0 на 1 и проверить решение
      */
-    private void checkNumber(int position){
-        ToggleButton tb;
-        switch (position){
-            case 0 -> tb = seven;
-            case 1 -> tb = six;
-            case 2 -> tb = five;
-            case 3 -> tb = four;
-            case 4 -> tb = three;
-            case 5 -> tb = two;
-            case 6 -> tb = one;
-            case 7 -> tb = zero;
-            default -> { return; }
-        }
-        if (tb.getText().equals("0")) {
-            tb.setText("1");
+    private void checkNumber(ToggleButton button){
+        if (button.getText().equals("0")) {
+            button.setText("1");
         } else {
-            tb.setText("0");
+            button.setText("0");
         }
 
         if(model.checkRight()){
