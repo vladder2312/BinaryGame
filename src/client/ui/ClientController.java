@@ -2,6 +2,7 @@ package client.ui;
 
 import client.Client;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.ToggleButton;
@@ -85,22 +86,11 @@ public class ClientController {
      * Выключить все кнопки
      */
     private void disableToggles(){
-        seven.setSelected(false);
-        seven.setText("0");
-        six.setSelected(false);
-        six.setText("0");
-        five.setSelected(false);
-        five.setText("0");
-        four.setSelected(false);
-        four.setText("0");
-        three.setSelected(false);
-        three.setText("0");
-        two.setSelected(false);
-        two.setText("0");
-        one.setSelected(false);
-        one.setText("0");
-        zero.setSelected(false);
-        zero.setText("0");
-        model.clearSelected();
+        for(Node node: anchorPane.getChildren()){
+            if(node.getClass().getName().equals("ToggleButton")){
+                ((ToggleButton)node).setSelected(false);
+                ((ToggleButton)node).setText("0");
+            }
+        }
     }
 }
