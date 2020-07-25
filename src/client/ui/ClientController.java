@@ -87,7 +87,7 @@ public class ClientController {
      */
     private void disableToggles(){
         for(Node node: anchorPane.getChildren()){
-            if(node.getClass().getName().equals("ToggleButton")){
+            if(node.getClass().getName().equals("javafx.scene.control.ToggleButton")){
                 ((ToggleButton)node).setSelected(false);
                 ((ToggleButton)node).setText("0");
             }
